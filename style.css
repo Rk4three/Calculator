@@ -1,0 +1,178 @@
+@font-face {
+    font-family: digital-7;
+    src:url(./fonts/digital-7.ttf);
+}
+@font-face {
+    font-family: OffBitTrial-101Bold;
+    src:url(./fonts/digital-7-mono.ttf);
+}
+
+body {
+    background-color: #F4EEE0;
+}
+
+#container {
+    background-color: #6D5D6E;
+    height: 600px;
+    width: 450px;
+    border-radius: 8%;
+    box-shadow: 12px 5px 0 5px #645565;
+    -webkit-transform: skewY(-3deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  
+}
+
+#top-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: #F4EEE0;
+    height: 100px;
+    width: 380px;
+    border: 10px solid #393646;
+    border-radius: 4%;
+}
+
+#previous {
+    margin-right: 20px;
+    font-family: digital-7;
+    font-size: 25px;
+}
+
+#answer {
+    color: #393646;
+    margin-right: 20px;
+    font-family: OffBitTrial-101Bold;
+    font-size: 45px;
+}
+
+.first-row #first-row-button {
+    background-color: #393646;
+    color: #F4EEE0;
+    height: 60px;
+    width: 105px;
+    margin: 1px;
+}
+
+#bottom-part {
+    background-color: #4F4557;
+    height: 400px;
+    width: 380px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 0 0 #312f3c;
+}
+
+#bottom-part button {
+    font-size: 20px;
+    height: 75px;
+    width: 75px;
+    margin: 2.5px;
+    border: 3px solid #312f3c;
+    box-shadow: 2px 2px 0 0 #312f3c;
+}
+
+#bottom-part #number {
+    background-color: #393646;
+    color: #F4EEE0;
+}
+
+#bottom-part #symbol {
+    background-color: #F4EEE0;
+    color: #393646;
+}
+
+#calculator-container {
+    max-width: 450px;
+    margin: 50px auto;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0;
+}
+  
+@media (max-width: 500px) {
+    #calculator-container {
+    transform: scale(0.7); 
+    }
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: #645565;
+    color: #000;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #645565);
+    
+}
+
+button:disabled {
+    cursor: default;
+
+}
+button:-moz-focusring {
+    outline: auto;
+}
+
+button svg {
+    display: block;
+    vertical-align: middle;
+  
+}
+
+button [hidden] {
+    display: none;
+}
+
+button {
+    box-sizing: border-box;
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+    text-transform: uppercase;
+}
+
+button:before {
+    --opacity: 0.2;
+    aspect-ratio: 1;
+    background: #fff;
+    border-radius: 50%;
+    content: "";
+    left: 50%;
+    opacity: var(--opacity);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100%;
+    z-index: -1;
+}
+  
+button:hover:before {
+    -webkit-animation: enlarge 1s forwards;
+    animation: enlarge 1s forwards;
+}
+  
+@-webkit-keyframes enlarge {
+    to {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(4);
+    }
+}
+
+@keyframes enlarge {
+    to {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(4);
+    }
+}
+
+/*
+Fonts: Digital-7 +3 by Style-7
+*/
